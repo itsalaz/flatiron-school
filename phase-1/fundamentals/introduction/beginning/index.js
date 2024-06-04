@@ -27,6 +27,7 @@ Core Deliverables
 // ~ Conditionals
 // if, if-else, if-else-if-else, ternary
 
+
 // ~ Functions
 // -> name, parameters, body, return, annotations
 // -> methods, forEach, callback functions, anonymous functions
@@ -39,3 +40,4 @@ Core Deliverables
 // 1. Write a function named `sum` that takes an array of `numbers` and returns its sum.
 // 2. Write a function named `double` that takes an array of `numbers` and doubles each of its values.
 // 3. Write a function named `lowercase` that takes an array of `words` and returns a lowercased copy.
+
