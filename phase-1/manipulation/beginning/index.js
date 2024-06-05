@@ -44,3 +44,31 @@ Challenges
 
 
 
+function displayList (books, ["All About Love", "A Return to Love"]) {
+
+  books.forEach((book)) => { let ul = document.createElement("ul"); let li = document.createElement("li")
+  ul.textContent = books
+  li.textContent = []
+
+  }
+};
+
+
+  
+
+  function displayList(names, ["Today.", "Tomorrow.", "Forever?"]) {
+    const div = document.getElementById ('#dates')
+    const ul = document.createElement("ul")
+    div.appendChild(ul)
+    const li = document.createElement("li")
+    ul.appendChild(li)
+  }
+
+
+
+
+  function addOne(number) {
+    console.log(number + 1);
+  }
+
+  addOne(6); // 7
