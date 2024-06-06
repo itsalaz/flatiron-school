@@ -49,12 +49,12 @@ Challenges
 
 
 
-document.querySelector("#tomorrow").addEventListener("click", () => {
+document.querySelector("#tomorrow").addEventListener("click", (event) => {
   document.querySelector('#forever').textContent = "On June 5, 2024.";
 
   console.log(event)
 });
-
+// when clicked, shows the date on the #forever line 
 
 document.querySelector("#tomorrow").addEventListener("submit", (event) => {
   event.preventDefault();
