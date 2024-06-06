@@ -44,3 +44,34 @@ Challenges
 
 
 
+
+
+
+
+
+document.querySelector("#tomorrow").addEventListener("click", () => {
+  document.querySelector('#forever').textContent = "On June 5, 2024.";
+
+  console.log(event)
+});
+
+
+document.querySelector("#tomorrow").addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log(event.target.date);
+  // drop down menu with date calendar 
+});
+
+
+document.querySelector("#tomorrow").addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log(event.target["data-input"].value);
+    // drop down menu with date calendar 
+  document.querySelector("#sometime").textContent = event.target["data-input"].value
+  // show specific date on sometime div 
+});
+
+// event === "submit"
+// event.target === <form>
+// event.target["data-input"] === <input name="data-input"
+// event.target["data-input"].value === 2024-06-27
