@@ -51,3 +51,41 @@ form.addEventListener("submit", event => {
   // Reset the form, so that the user can start typing in another task.
   form.reset();
 });
+
+
+
+
+/*
+
+OBJECTIVE: make a to-do app, where users can submit tasks and view them in a list.
+
+USER STORIES:
+As a user, I want to...
+1. ...type a task into the form.
+2. ...submit the form.
+3. ...see the task I've submitted in the DOM (i.e. the list)
+
+
+BRAINSTORMING:
+- Make sure there's a <form> with an <input> where the user can type their task.
+- Make sure the <form> has a submit button (i.e. <input type="submit">) for submitting tasks.
+- Prevent the default behavior of a form submission (i.e the page redirecting to another page)
+
+
+// Event - callback function, can call methods on event - ex. preventDefault behavior */
+
+document.querySelector("form").addEventListener("submit", (event) => {
+event.preventDefault()
+console.log("The form was submitted!")
+console.log(event) // an object with tons of properties related to the "submit" event that just occurred
+const li = document.createElement("li") //the target of the "submit" event, i.e the <form>
+li.textContent = event.target.task.value // since target is a <form>, .task gives us the <input name="task"> in that <form>
+// set the text of the <li> element to the <input> value. 
+document.querySelector9("ul#task").append(li)
+
+event.target.reset()
+//reset the form (i.e clear any input values)
+});
+
+
+// target = form
