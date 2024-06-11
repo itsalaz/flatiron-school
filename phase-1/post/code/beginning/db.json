@@ -1,0 +1,14 @@
+{
+  "candies": [
+    {
+      "id": "1",
+      "name": "Skittles",
+      "chocolate": false
+    },
+    {
+      "id": "2",
+      "name": "Starburst",
+      "chocolate": false
+    }
+  ]
+}

@@ -24,3 +24,43 @@ Objectives
 //    into a function!
 // 2. Try writing your own POST request.
 // 3. Try writing PATCH and DELETE requests!
+
+
+fetch("http://localhost:3000/candies")
+.then(response => response.json())
+.then(candies => {
+  console.log(candies)
+})
+  .catch(error => console.log(error))
+
+
+document.querySelector("form").addEventListener("submit", event => {
+  event.preventDefault()
+  const newCandy = {
+  name: event.target["name"].value,
+  chocolate: event.target["chocolate"].checked
+}
+  console.log(newCandy)
+})
+
+
+document.querySelector("form").addEventListener("submit", event => {
+  event.preventDefault()
+  const newCandy = {
+  name: event.target["name"].value,
+  chocolate: event.target["chocolate"].checked
+}
+  fetch("http://localhost:3000/candies", {
+    method: "POST"
+    headers: {
+      "Content-Type":"aaplication/json"
+      "Accept": "application/json"
+    },
+      body: JSON.stringify(newCandy)
+  })
+  .then(response => response.json())
+  .then(newCandyInDb => {
+    console.log(newCandyInDb)
+  })
+  console.log(newCandy)
+})
